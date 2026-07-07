@@ -22,6 +22,16 @@ class DataManager():
 
         #Creates a search path of all files in the package with a .py extension
         search_path = os.path.join(package_path, '*.py')
+        all_files = glob.glob(search_path)
+
+        discovered_modules = []
+        for file_path in all_files:
+            m_name = os.path.basename(file_path)[:-3]
+            if m_name not in ("__init__", "data_manager", "sample_data"):
+                discovered_modules.append(m_name)
+
+        # True if your real files (like character.py or config.py) exist in the directory
+        has_real_game_data = len(discovered_modules) > 0
 
         #Searches through the search pathway to extract all data files
         for file_path in glob.glob(search_path):
@@ -31,6 +41,10 @@ class DataManager():
 
             #Skips the DataManager and __init__ modules to avoid circular imports and redundant processing
             if module_name in ("data_manager", "__init__"):
+                continue
+
+            # to skip loading the generic 'sample_data' blueprint file entirely!
+            if module_name == "sample_data" and has_real_game_data:
                 continue
 
             #Constructs the full module name for importing, considering the package structure
