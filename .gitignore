@@ -26,7 +26,7 @@ data/*.py
 # EXEMPTIONS: Do NOT ignore the manager or package wrapper
 !data/__init__.py
 !data/data_manager.py 
-!data/sample_data.py
+!data/base_data.py
 
 # ==========================================
 # 3. STATES PACKAGE RULES

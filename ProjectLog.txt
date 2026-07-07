@@ -7,6 +7,7 @@
 # Implement a Database component to handle database operations.
 
 ## TODO LIST
+# [ ] Implement a clock in the Engine Class to control frame rate and time based events.
 # [X] CREATE A GAME DATA MANAGER 
 # [ ] DATA FILES TO ADD:
 # [ ] MAPS

@@ -44,7 +44,7 @@ class DataManager():
                 continue
 
             # to skip loading the generic 'sample_data' blueprint file entirely!
-            if module_name == "sample_data" and has_real_game_data:
+            if module_name == "base_data" and has_real_game_data:
                 continue
 
             #Constructs the full module name for importing, considering the package structure
@@ -59,7 +59,7 @@ class DataManager():
                     if obj.__module__ == full_module_name:
                     
                         instance = obj()
-                        data_key = module_name.lower()
+                        data_key = name.lower()
 
                         self.data[data_key] = instance
                         setattr(self, data_key, instance)
