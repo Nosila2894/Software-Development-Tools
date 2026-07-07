@@ -1,0 +1,56 @@
+# ==========================================
+# 1. Standard Python System Data
+# ==========================================
+
+# Python bytecode cache
+.vs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+
+# ==========================================
+# 2. DATA PACKAGE RULES
+# ==========================================
+
+# Ignore all custom data structures/content files
+data/*.py
+
+# EXEMPTIONS: Do NOT ignore the manager or package wrapper
+!data/__init__.py
+!data/data_manager.py 
+!data/sample_data.py
+
+# ==========================================
+# 3. STATES PACKAGE RULES
+# ==========================================
+
+# Ignore all game-specific states
+states/*.py
+
+# EXEMPTIONS: Keep framework blueprints public
+!states/__init__.py
+!states/base_state.py
+
+# ==========================================
+# 4. USER_INTERFACE PACKAGE RULES
+# ==========================================
+
+# Ignore all game-specific UI screens
+user_interface/*.py
+
+# EXEMPTIONS: Keep only the base UI layout interface public
+!user_interface/__init__.py
+!user_interface/base_ui.py
+
+# ==========================================
+# 5. UTILITY PACKAGE RULES
+# ==========================================
+
+# Hide gameplay math/mechanics
+utility/utility.py
