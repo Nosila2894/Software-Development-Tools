@@ -4,6 +4,8 @@
 
 # Python bytecode cache
 .vs/
+*.sln 
+*.pyproj
 __pycache__/
 *.pyc
 *.pyo
