@@ -4,7 +4,7 @@
 
 # Python bytecode cache
 .vs/
-*.sln 
+*.slnx 
 *.pyproj
 __pycache__/
 *.pyc
@@ -56,3 +56,4 @@ user_interface/*.py
 
 # Hide gameplay math/mechanics
 utility/utility.py
+/Game Practice.slnx
