@@ -57,3 +57,6 @@ user_interface/*.py
 # Hide gameplay math/mechanics
 utility/utility.py
 /Game Practice.slnx
+/Game Practice.pyproj.user
+/.coverage
+/testEnvironments.json
